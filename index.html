@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0px;
+        }
+        #header{
+            background-color: #1a365d;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+        }
+        .tabs{
+            
+            font-size: 30px;
+            
+            margin-top: auto;
+            margin-bottom: auto;
+            color:aliceblue;
+            background-color: #1a365d;
+            border: none;
+            height: 100%;
+            
+        }
+        #main{
+            width: 80%;
+            margin: auto;
+            background-color: azure;
+            height: 100%;
+        }
+        #home{
+            background-color: aliceblue;
+            color: #1a365d;
+            
+        }
+        .sections{
+            background-color: rgb(241, 241, 241);
+            border: 2px solid rgb(132, 132, 132);
+            border-radius: 5px;
+            width: 47%;
+            margin: 1%;
+            display: inline-block;
+            font-family: Roboto;
+            max-height: 400px;
+            overflow: auto;
+        }
+        hr{
+            width: 90%;
+            background-color: red;
+        }
+        h3,h4,h5,p{
+            margin: 0px;
+        }
+        .announcement{
+            background-color: azure ;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgb(132, 132, 132);
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+        /*p{
+            width: 200px;           /* fixed width required */
+          /*  white-space: nowrap;    /* prevent wrapping */
+            /*overflow: hidden;       /* hide overflow */
+            /*text-overflow: ellipsis; /* show "..." */
+        /*}*/
+
+        #footer{
+            background-color: #1a365d;
+            height: 100px;
+            color: aliceblue;
+        }
+        table#calendar{
+            border: 1px solid grey;
+            width: 100%;
+            height: 200px;
+            background-color: aliceblue;
+        }
+        td{
+            text-align: center;
+            background-color: white;
+            
+        }
+        th{
+           /* text-align: center;*/
+        }
+        #profile{
+            border-radius: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+    
+        <div id="header">
+            <span id="logo"><img src="logo dcm.png" style="height: 98px; border-bottom: 1px solid #1a365d;"></span>
+            <button class="tabs" id="home">Home</button>
+            <button class="tabs" id="clubs" onclick="document.getElementById('main').style.display='none';document.getElementById('clubs').style.backgroundColor='aliceblue';">Clubs</button>
+            <button class="tabs" id="recruitment">Recruitment</button>
+            <button class="tabs" id="events">Events</button>
+            <button class="tabs" id="about">About</button>
+            <button id="profile">Profile</button>
+        </div>
+
+
+    <div id="main">
+
+        
+        <span id="announcements" class="sections">
+            <h3>Announcements</h3>
+            <hr>
+            
+            <div class="announcement">
+                <h4>E-Cell</h4>
+                <h5>15 December, 2025- FR Recruitment coming soon</h5>
+                <p>Crewmates the opportunity is almost here! E-Cell NIT-B's Freshers Representative Program is landing soon. Suit Up, spot the tasks, connect and leave your mark through Central India's largest entrepreneurial fest.<br>The countdown is initiated. Be ready!</p>
+            </div>
+            <div class="announcement">
+                <h4>E-Cell</h4>
+                <h5>15 December, 2025- FR Recruitment coming soon</h5>
+                <p>Crewmates the opportunity is almost here! E-Cell NIT-B's Freshers Representative Program is landing soon. Suit Up, spot the tasks, connect and leave your mark through Central India's largest entrepreneurial fest.<br>The countdown is initiated. Be ready!</p>
+            </div>
+            <div class="announcement">
+                <h4>E-Cell</h4>
+                <h5>15 December, 2025- FR Recruitment coming soon</h5>
+                <p>Crewmates the opportunity is almost here! E-Cell NIT-B's Freshers Representative Program is landing soon. Suit Up, spot the tasks, connect and leave your mark through Central India's largest entrepreneurial fest.<br>The countdown is initiated. Be ready!</p>
+            </div>
+            <div class="announcement">
+                <h4>E-Cell</h4>
+                <h5>15 December, 2025- FR Recruitment coming soon</h5>
+                <p>Crewmates the opportunity is almost here! E-Cell NIT-B's Freshers Representative Program is landing soon. Suit Up, spot the tasks, connect and leave your mark through Central India's largest entrepreneurial fest.<br>The countdown is initiated. Be ready!</p>
+            </div>
+            <div class="announcement">
+                <h4>E-Cell</h4>
+                <h5>15 December, 2025- FR Recruitment coming soon</h5>
+                <p>Crewmates the opportunity is almost here! E-Cell NIT-B's Freshers Representative Program is landing soon. Suit Up, spot the tasks, connect and leave your mark through Central India's largest entrepreneurial fest.<br>The countdown is initiated. Be ready!</p>
+            </div>
+            <div class="announcement">
+                <h4>E-Cell</h4>
+                <h5>15 December, 2025- FR Recruitment coming soon</h5>
+                <p>Crewmates the opportunity is almost here! E-Cell NIT-B's Freshers Representative Program is landing soon. Suit Up, spot the tasks, connect and leave your mark through Central India's largest entrepreneurial fest.<br>The countdown is initiated. Be ready!</p>
+            </div>
+        </span>
+
+        
+        <span id="calendar" class="sections">
+            <h3>Calendar</h3>
+            <hr>
+           <!-- <img src="calendar.png" width="80%">-->
+            <table id="calendar">
+                <tr>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            
+            <h4>15 December, 2025</h4>
+            
+            <ul>
+                <li>E-summit</li>
+                <li>E-summit</li>
+                <li>E-summit</li>
+                <li>E-summit</li>
+                <li>E-summit</li>
+                <li>E-summit</li>
+                <li>E-summit</li>
+                <li>E-summit</li>
+                <li>E-summit</li>
+            </ul>
+
+        </span>
+
+        
+        <span id="upcomingEvents" class="sections">
+            <h3>Upcoming Events</h3>
+            <hr>
+        </span>
+
+        
+        <span id="recentUpdates" class="sections">
+            <h3>Recent Updates on Website</h3>
+            <hr>
+        </span>
+
+
+        <span id="socialMedia" class="sections">
+            <h3>Social Media</h3>
+            <hr>
+            <div id="instagram">
+                Instagram
+            </div>
+            <div id="linkedin">
+                LinkedIn
+            </div>
+        </span>
+    
+    
+    </div>
+    
+    <div id="footer">
+        <h3>Feedback</h3>
+        <h3>Contact Us</h3>
+        
+    </div>
+</body>
+</html>
