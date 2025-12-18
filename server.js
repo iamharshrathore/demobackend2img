@@ -7,17 +7,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const server = createServer(async (req, res) => {
-  // Handle preflight requests
-  if (req.method === "OPTIONS") {
-    res.writeHead(200, {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type"
-    });
-    res.end();
-    return;
-  }
-
   if (req.method === "GET") {
     let filePath;
     
@@ -28,14 +17,13 @@ const server = createServer(async (req, res) => {
     }
 
     try {
-      const data = await readFile(filePath);
+      const data = await readFile(filePath, "utf-8");  // UTF-8 encoding
       
-      // Set content type based on file extension
-      const ext = req.url.split('.').pop().toLowerCase();
+      const ext = req.url.split('.').pop()?.toLowerCase() || 'txt';
       const contentTypes = {
-        'html': 'text/html',
-        'css': 'text/css',
-        'js': 'application/javascript',
+        'html': 'text/html; charset=utf-8',      // Fixed: added charset
+        'css': 'text/css; charset=utf-8',
+        'js': 'application/javascript; charset=utf-8',
         'png': 'image/png',
         'jpg': 'image/jpeg',
         'jpeg': 'image/jpeg',
@@ -44,16 +32,16 @@ const server = createServer(async (req, res) => {
       };
       
       res.writeHead(200, { 
-        "Content-Type": contentTypes[ext] || 'text/plain',
+        "Content-Type": contentTypes[ext] || 'text/plain; charset=utf-8',
         "Cache-Control": "public, max-age=3600"
       });
       res.end(data);
     } catch (error) {
-      res.writeHead(404, { "Content-Type": "text/html" });
+      res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
       res.end("<h1>404 - File not found</h1>");
     }
   } else {
-    res.writeHead(405, { "Content-Type": "text/plain" });
+    res.writeHead(405, { "Content-Type": "text/plain; charset=utf-8" });
     res.end("Method Not Allowed");
   }
 });
